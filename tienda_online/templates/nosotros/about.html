@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Sobre Nosotros{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Sobre Nosotros</h1>
+    <p>
+        ¡Bienvenidos a <strong>[Nombre de la Empresa]</strong>! Somos un equipo apasionado por <strong>[lo que hacen]</strong>. 
+        Desde <strong>[año de fundación]</strong>, hemos trabajado para ofrecer <strong>[productos/servicios]</strong> de la más alta calidad a nuestros clientes.
+    </p>
+
+    <!-- Historia -->
+    <div class="my-5">
+        <h2>Nuestra Historia</h2>
+        <p>
+            Fundada en <strong>[año]</strong> por <strong>[fundador/es]</strong>, nuestra empresa comenzó con la visión de <strong>[visión inicial]</strong>. 
+            A lo largo de los años, hemos crecido y evolucionado, adaptándonos a <strong>[cambios en el mercado, avances tecnológicos, etc.]</strong>.
+        </p>
+    </div>
+
+    <!-- Equipo -->
+    <div class="my-5">
+        <h2>Conoce a Nuestro Equipo</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card team-card">
+                    <img src="{% static 'images/diego.png' %}" class="card-img-top" class="img-fluid" alt="Miembro 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre 1</h5>
+                        <p class="card-text">Rol: <strong>[Rol]</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card team-card">
+                    <img src="{% static 'images/carmen.png' %}" class="card-img-top" class="img-fluid" alt="Miembro 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre 2</h5>
+                        <p class="card-text">Rol: <strong>[Rol]</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card team-card">
+                    <img src="{% static 'images/jose.png' %}" class="card-img-top" class="img-fluid" alt="Miembro 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre 3</h5>
+                        <p class="card-text">Rol: <strong>[Rol]</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Misión y Visión -->
+    <div class="my-5">
+        <h2>Nuestra Misión y Visión</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title">Misión</h5>
+                        <p class="card-text">
+                            Nuestra misión es <strong>[describir la misión de la empresa]</strong>. Creemos en <strong>[valores relacionados con la misión]</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card border-success">
+                    <div class="card-body">
+                        <h5 class="card-title">Visión</h5>
+                        <p class="card-text">
+                            Nuestra visión es <strong>[describir la visión de la empresa]</strong>. Buscamos <strong>[objetivos y aspiraciones a largo plazo]</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galería -->
+    <div class="my-5">
+        <h2>Galería</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="{% static 'images/empresa1.png' %}" class="img-fluid" alt="Imagen 1">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="{% static 'images/empresa2.png' %}" class="img-fluid" alt="Imagen 2">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="{% static 'images/empresa3.png' %}" class="img-fluid" alt="Imagen 3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonios -->
+    <div class="my-5">
+        <h2>Lo Que Dicen Nuestros Clientes</h2>
+        <div id="testimoniosCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-block w-100 p-4 bg-light rounded">
+                        <p class="mb-0">"Excelente servicio y atención. Recomiendo ampliamente a [Nombre de la Empresa]!"</p>
+                        <footer class="blockquote-footer mt-2">Cliente Satisfecho</footer>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100 p-4 bg-light rounded">
+                        <p class="mb-0">"Profesionales y comprometidos. Los resultados superaron nuestras expectativas."</p>
+                        <footer class="blockquote-footer mt-2">Otro Cliente Feliz</footer>
+                    </div>
+                </div>
+                <!-- Repite para más testimonios -->
+            </div>
+            <a class="carousel-control-prev" href="#testimoniosCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimoniosCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contacto -->
+    <div class="my-5">
+        <h2>Contacto</h2>
+        <p>Teléfono: <strong>[Número de Teléfono]</strong></p>
+        <p>Email: <a href="mailto:[correo@ejemplo.com]"><strong>[correo@ejemplo.com]</strong></a></p>
+        <p>Dirección: <strong>[Dirección Física]</strong></p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,159 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+}
+
+.card-body {
+    flex: 1; /* Permite que el contenido de la tarjeta ocupe el espacio restante */
+}
+
+
+.carousel {
+    max-width: 80%; /* Ajusta este valor según lo necesites */
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+    height: 400px; /* Ajusta la altura según lo necesites */
+}
+
+.carousel-img {
+    height: 400px; /* Ajusta este valor según lo necesites */
+    object-fit: cover;
+}
+
+.custom-caption h5 {
+    color: black; /* Cambia el color según lo necesites */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente para mayor contraste */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Cambia el color de los iconos según lo necesites */
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.carousel-caption {
+    bottom: 20px; /* Ajusta la posición del texto si es necesario */
+}
+
+.product-img {
+    height: 200px; /* Ajusta este valor según lo necesites */
+    object-fit: cover;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .btn {
+    margin-top: auto;
+}
+
+
+.alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+.alert {
+    display: none;
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
+/* Asegúrate de que este archivo esté incluido en tu base.html */
+.card.team-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.card.team-card img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según el diseño deseado */
+    object-fit: cover; /* Esto asegura que la imagen se ajuste al contenedor sin distorsionar */
+}
+
+.card-body {
+    flex: 1;
+}
+
+.mosaic-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.mosaic-item {
+    position: relative;
+    flex: 1 1 calc(33.333% - 1rem); /* Ajusta el tamaño según el número de columnas que quieras */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mosaic-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mosaic-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.mosaic-content {
+    padding: 1rem;
+}
+
+.mosaic-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.mosaic-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}

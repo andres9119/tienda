@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Banner Section -->
+<section class="banner">
+    <div class="container">
+        <h1>¡Bienvenido a Nuestra Tienda Online!</h1>
+        <p>Explora los mejores productos a los mejores precios.</p>
+        <a href="#" class="btn btn-primary">Explorar Productos</a>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories py-5">
+    <div class="container">
+        <h2>Categorías</h2>
+        <div id="carouselCategories" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/electronica.png' %}" class="d-block w-100 carousel-img" alt="Categoría 1">
+                    <div class="carousel-caption d-none d-md-block custom-caption">
+                        <h5>Electrónica</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/ropa.png' %}" class="d-block w-100 carousel-img" alt="Categoría 2">
+                    <div class="carousel-caption d-none d-md-block custom-caption">
+                        <h5>Ropa</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/hogar.png' %}" class="d-block w-100 carousel-img" alt="Categoría 3">
+                    <div class="carousel-caption d-none d-md-block custom-caption">
+                        <h5>Hogar</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCategories" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCategories" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Featured Products Section -->
+<section class="featured-products py-5">
+    <div class="container">
+        <h2>Productos Destacados</h2>
+        
+        <div class="row">
+            {% for producto in productos_destacados %}
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{ producto.imagen.url }}" class="card-img-top" alt="{{ producto.nombre }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">{{ producto.descripcion }}</p>
+                            <p class="card-text"><strong>${{ producto.precio }}</strong></p>
+                            <a href="{% url 'productos:producto_detalle' producto.id %}" class="btn btn-primary">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-us py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una tienda comprometida con ofrecer los mejores productos a nuestros clientes. Nuestro objetivo es proporcionar una experiencia de compra excepcional.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/about.png' %}" alt="Sobre Nosotros" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
